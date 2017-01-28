@@ -41,11 +41,11 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Outline
+                        Structure
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#section1">Section1</a>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
@@ -76,23 +76,27 @@
                     <div class="col-lg-12">
                         <h1>Master Thesis Online Appendix</h1>
                         <p>Welcome to the online appendix of Philipp Rathjen's master thesis. This format was chosen to allow for easy interaction with the numerical simulations divised over the course of the work on Aghion et al. (2005). For any questions, please feel free to contact me directly at philipp.rathjen@outlook.com</p>
+                        <br>
+                        <p>Please install the Mathematica CDF Player to be able to follow the simulations</p>
                         <!-- <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p> -->
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                     </div>
                 </div>
             </div>
             <hr>
-            <h3>Section I: XXX</h3>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
-                    <embed src = 'Example.cdf' height = "433" width="100%"></embed>
+            <div id="section1">
+                <h3>Section I: XXX</h3>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+                        <embed src = 'Example.cdf' height = "433" width="100%"></embed>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
-                <div class="col-md-3"></div>
+                    <p> When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
             </div>
-                <p> When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-                $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
         </div>
         <!-- /#page-content-wrapper -->
 

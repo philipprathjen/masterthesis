@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Msc Thesis | Appendix</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
 
 </head>
 
@@ -35,7 +41,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Outline
                     </a>
                 </li>
                 <li>
@@ -68,13 +74,33 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <h1>Master Thesis Online Appendix</h1>
+                        <p>Welcome to the online appendix of Philipp Rathjen's master thesis. This format was chosen to allow for easy interaction with the numerical simulations divised over the course of the work on Aghion et al. (2005). For any questions, please feel free to contact me directly at philipp.rathjen@outlook.com</p>
+                        <!-- <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p> -->
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                     </div>
                 </div>
             </div>
+            <hr>
+            <div class="row">
+
+                <div class="col-md-3"><h3>Section I: XXX</h3></div>
+                <div class="col-md-6">
+                    <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+                    <script type="text/javascript">
+                    var cdf = new cdfplugin();
+                    cdf.setDefaultContent('<a href="http://www.wolfram.com/cdf-player/"><img  src="Example.png"></a>');
+                    cdf.embed('Example.cdf', 433, 388);
+                    </script>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+                
+            </div>
+
         </div>
         <!-- /#page-content-wrapper -->
 

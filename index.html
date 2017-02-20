@@ -56,7 +56,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#section1">Aghion Et al. Model</a>
+                    <a href="#section1">Aghion Et al. (2005) Model</a>
                 </li>
                 <li>
                     <a href="#section2">Model: Basics</a>
@@ -96,7 +96,7 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
-                        <embed src = 'Aghion_e1.cdf' height = "433" width="100%"></embed>
+                        <embed src = 'mathematica_site/Aghion_e1.cdf' height = "433" width="100%"></embed>
                     </div>
                     <div class="col-md-3"></div>
                 </div>
@@ -118,13 +118,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h4>Profit Levels</h4>
-                        <embed src = 'model_profit.cdf' height="450px" width="100%"></embed>
+                        <embed src = 'mathematica_site/model_profit.cdf' height="450px" width="100%"></embed>
                     </div>
                     <div class="col-md-6">
                         <h4>Explanation</h4><br>
                         <ul>
-                            <li>xxx</li>
-                            <li>xxx</li>
+                            <li>Magnitude is determined by the earnings gap $\delta\in[0;1[$ between all three industrial states (leveled [0], unleveled [1/-1], divergent [2/-2])</li>
+                            <li>Magnitude is determined by competition parameter $\varepsilon\in[0;0.5]$, affecting cooperation/competition in the leveled and unleveled states</li>
                         </ul>
                     </div>
                 </div>   
@@ -132,24 +132,25 @@
                     <div class="col-md-6">
                         <h4>Explanation</h4><br>
                         <ul>
-                            <li>xxx</li>
-                            <li>xxx</li>
+                            <li>Innovation levels are the result of the intertemporal optimzation problem</li>
+                            <li>By assumption innovation levels are defined only for $x_{i}\geq0$</li>
+                            <li>Numerical simulation shows that $\frac{dx_{i}}{de}\geq0$</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h4>Innovation Levels</h4>
-                        <embed src = 'model_innov_level.cdf' height="450px" width="100%"></embed>
+                        <embed src = 'mathematica_site/model_innov_level.cdf' height="450px" width="100%"></embed>
                     </div>
                 </div>
             </div>
-
+            <hr>
             <div id="section3">
                 <h3>Section III: Steady State equation</h3>
                 <p>The following equation is the result of substituting the state dependant innovation levels into the innovation steady state equation from section XXX of the appendix. </p>
                 <button class="btn btn-default" id="hide">Hide Equation</button>
                 <button class="btn btn-default" id="show">Show Equation</button>
                 <p id="innov_equation" style="display:none">$$
-\frac{\frac{2 \left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right) \left(0.5 d^2 F (2 d
+Innovation = \frac{\frac{2 \left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right) \left(0.5 d^2 F (2 d
    (0.5\, -e)+2 e)+b h-b r-0.5 d^4 F\right)}{b^3}+\frac{\left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b
    r-0.5 d^4 F\right) \left(\frac{\left(1-0.5 d^2\right) F (2 d (0.5\, -e)+2 e)-b h-3 b r-0.5 d^4 F}{b}+h\right)}{b^2}+\frac{2 \left(-4 b r-0.5 d^4
    F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right) \left(\frac{\left(1-0.5 d^2\right) F (2 d (0.5\, -e)+2
@@ -165,11 +166,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h4>Innovation - Competition</h4>
-                        <embed src = 'model_coll.cdf' height="450px" width="100%"></embed>
+                        <embed src = 'mathematica_site/model_coll.cdf' height="450px" width="100%"></embed>
                     </div>
                     <div class="col-md-6">
                         <h4>Innovation - Gap from innovating</h4>
-                        <embed src = 'model_delta.cdf' height="450px" width="100%"></embed>
+                        <embed src = 'mathematica_site/model_delta.cdf' height="450px" width="100%"></embed>
                     </div>
                     
                 </div>

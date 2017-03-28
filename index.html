@@ -9,13 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Msc Thesis | Appendix</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="site/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="site/css/simple-sidebar.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,6 +23,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#innov_equation").hide(500);
+        });
+        $("#show").click(function(){
+            $("#innov_equation").show(500);
+        });
+    });
+    </script>
 
 </head>
 
@@ -35,30 +52,19 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Appendix Structure
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#section1">Aghion Et al. (2005) Model</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a href="#section2">Model: Basics</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="#section3">Model: Steady State</a>
                 </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -68,12 +74,108 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <h1>Master Thesis Online Appendix</h1>
+                        <p>Welcome to the online appendix of Philipp Rathjen's master thesis in Economics at Ludwig Maximilian University of Munich. This format was chosen to allow for easy interaction with the numerical simulations divised over the course of the work on Aghion et al. (2005). For any questions, please feel free to contact me directly at philipp.rathjen@outlook.com</p>
+                        <br>
+                        <p>Please install the Mathematica CDF Player to be able to follow the simulations. The use of Safari for fast rendering is recommended.</p>
+                        <!-- <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p> -->
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                     </div>
                 </div>
+            </div>
+            <hr>
+            <div id="section1">
+                <h3>Section I: Aghion et al. (2005)</h3>
+                <p>The following graph displays the relationship between the innvoation level within the economy and the collusion/competition parameter developed by Aghion et al. (2005) </p>
+                <ul><u>The escape-competition effect</u>: If two companies compete directly on the same level, fiercer competition will increase their incentive to get ahead and capture rents</ul>
+                <ul><u>The Schumpeterian effect</u>: Reducing the rents that can be captured by a follower if he innovates, reduces his incentive to innovate</ul>
+                <p> Recall that an incumbent cannot innovate by assumption in the Aghion et al. (2005) model.</p>
+                <p> The graphic makes clear how an inverted-U relationship depending on the relationship $ \eta=\frac{h}{\sqrt{\pi_{1}}} $</p>
+ 
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+                        <embed src = 'site/mathematica_site/Aghion_e1.cdf' height = "433" width="100%"></embed>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                    <p>Specifically, the paramterized model above allows easy tractability of the fact the <u>inverted U shape</u> will be generated whenever:</p>
+                    <p> $$ \sqrt{\eta^{2}+1}<\sqrt{(\eta^{2}+2)/3}+\eta<\sqrt{\eta^{2}+2} $$</p>
+
+                    <p>Furthermore, as the Appendix in the Aghion. et. al (2005) makes clear, the <u>escape competition effect</u> will sctrictly dominate whenever:</p>
+                    <p> $$ \sqrt{(\eta^{2}+2)/3}+\eta\geq\sqrt{\eta^{2}+2} $$</p>
+
+                    <p>The <u>Schumpeterian effect</u> will strictly dominate within the economy whenever: </p>
+                    <p>$$ \sqrt{\eta^{2}+1}>\sqrt{(\eta^{2}+2)/3}+\eta $$</p>
+
+ 
+            </div>
+            <hr>
+
+            <div id="section2">
+            <h3>Section II: Alternative Model Specification</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Profit Levels</h4>
+                        <embed src = 'site/mathematica_site/model_profit.cdf' height="450px" width="100%"></embed>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Explanation</h4><br>
+                        <ul>
+                            <li>Magnitude is determined by the earnings gap $\delta\in[0;1[$ between all three industrial states (leveled [0], unleveled [1/-1], divergent [2/-2])</li>
+                            <li>Magnitude is determined by competition parameter $\varepsilon\in[0;0.5]$, affecting cooperation/competition in the leveled and unleveled states</li>
+                        </ul>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Explanation</h4><br>
+                        <ul>
+                            <li>Innovation levels are the result of the intertemporal optimzation problem</li>
+                            <li>By assumption innovation levels are defined only for $x_{i}\geq0$</li>
+                            <li>Numerical simulation shows that $\frac{dx_{i}}{de}\geq0$</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Innovation Levels</h4>
+                        <embed src = 'site/mathematica_site/model_innov_level.cdf' height="450px" width="100%"></embed>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="section3">
+                <h3>Section III: Steady State equation</h3>
+                <p>The following equation is the result of substituting the state dependant innovation levels into the innovation steady state equation from section XXX of the appendix. </p>
+                <button class="btn btn-default" id="hide">Hide Equation</button>
+                <button class="btn btn-default" id="show">Show Equation</button>
+                <p id="innov_equation" style="display:none">$$
+Innovation = \frac{\frac{2 \left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right) \left(0.5 d^2 F (2 d
+   (0.5\, -e)+2 e)+b h-b r-0.5 d^4 F\right)}{b^3}+\frac{\left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b
+   r-0.5 d^4 F\right) \left(\frac{\left(1-0.5 d^2\right) F (2 d (0.5\, -e)+2 e)-b h-3 b r-0.5 d^4 F}{b}+h\right)}{b^2}+\frac{2 \left(-4 b r-0.5 d^4
+   F+\left(1-0.5 d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right) \left(\frac{\left(1-0.5 d^2\right) F (2 d (0.5\, -e)+2
+   e)-b h-3 b r-0.5 d^4 F}{b}+\frac{0.5 d^2 F (2 d (0.5\, -e)+2 e)+b h-b r-0.5 d^4 F}{b}+h\right)}{b^2}}{\frac{2 \left(-4 b r-0.5 d^4 F+\left(1-0.5
+   d^4\right) F\right) \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4 F\right)}{b^2}+\frac{2 \left(0.5 d F (2 d (0.5\, -e)+2 e)-2 b r-0.5 d^4
+   F\right) \left(0.5 d^2 F (2 d (0.5\, -e)+2 e)+b h-b r-0.5 d^4 F\right)}{b^2}+\frac{\left(-4 b r-0.5 d^4 F+\left(1-0.5 d^4\right) F\right)
+   \left(\frac{\left(1-0.5 d^2\right) F (2 d (0.5\, -e)+2 e)-b h-3 b r-0.5 d^4 F}{b}+h\right)}{b}}
+                $$</p>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Innovation - Competition</h4>
+                        <embed src = 'site/mathematica_site/model_coll.cdf' height="450px" width="100%"></embed>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Innovation - Gap from innovating</h4>
+                        <embed src = 'site/mathematica_site/model_delta.cdf' height="450px" width="100%"></embed>
+                    </div>
+                    
+                </div>
+
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -82,10 +184,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="site/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="site/js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

@@ -1,0 +1,982 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     40088,        973]
+NotebookOptionsPosition[     39099,        935]
+NotebookOutlinePosition[     39456,        951]
+CellTagsIndexPosition[     39413,        948]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Firstly, consider the relationship between the distinct levels of profit that \
+result from the assumptions on market size and revenue distribution.\
+\>", "Text",
+ CellChangeTimes->{3.690718675046447*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"BarChart", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"F", "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"0.5", "*", 
+           RowBox[{"(", 
+            RowBox[{"d", "^", "4"}], ")"}]}]}], ")"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"F", "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", "*", "d", "*", 
+             RowBox[{"(", 
+              RowBox[{"0.5", "-", "e"}], ")"}]}], "+", 
+            RowBox[{"2", "e"}]}], ")"}]}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"0.5", "*", 
+           RowBox[{"(", 
+            RowBox[{"d", "^", "2"}], ")"}]}]}], ")"}]}], ",", " ", 
+       RowBox[{"0.5", "*", "F", "*", "d", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+          RowBox[{"2", "*", "e"}]}], ")"}]}], ",", " ", 
+       RowBox[{"0.5", "*", "F", "*", 
+        RowBox[{"(", 
+         RowBox[{"d", "^", "2"}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", "*", "d", "*", 
+           RowBox[{"(", 
+            RowBox[{"0.5", "-", "e"}], ")"}]}], "+", 
+          RowBox[{"2", "e"}]}], ")"}]}], ",", 
+       RowBox[{"0.5", "*", "F", "*", 
+        RowBox[{"(", 
+         RowBox[{"d", "^", "4"}], ")"}]}]}], " ", "}"}], ",", 
+     RowBox[{"ChartLabels", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<pi[2]\>\"", ",", "\"\<pi[1]\>\"", ",", " ", "\"\<pi[0]\>\"", ",", 
+        " ", "\"\<pi[-1]\>\"", ",", " ", "\"\<pi[-2]\>\""}], "}"}]}]}], "]"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"F", ",", "1", ",", "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "0", ",", "0.99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"e", ",", "0", ",", "0.5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.690718844274816*^9, 3.6907189392671347`*^9}, {
+  3.694972192326805*^9, 3.694972193049189*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.618, $CellContext`e$$ = 
+    0.401, $CellContext`F$$ = 33.7, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`F$$], 1, 100}, {
+      Hold[$CellContext`d$$], 0, 0.99}, {
+      Hold[$CellContext`e$$], 0, 0.5}}, Typeset`size$$ = {360., {113., 117.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`F$96879$$ = 0, $CellContext`d$96880$$ = 
+    0, $CellContext`e$96881$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`d$$ = 0, $CellContext`e$$ = 
+        0, $CellContext`F$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`F$$, $CellContext`F$96879$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$96880$$, 0], 
+        Hold[$CellContext`e$$, $CellContext`e$96881$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      BarChart[{$CellContext`F$$ (1 - 
+          0.5 $CellContext`d$$^4), ($CellContext`F$$ ((2 $CellContext`d$$) (
+             0.5 - $CellContext`e$$) + 2 $CellContext`e$$)) (1 - 
+          0.5 $CellContext`d$$^2), ((
+           0.5 $CellContext`F$$) $CellContext`d$$) (((0.5 - $CellContext`e$$) 
+            2) $CellContext`d$$ + 
+          2 $CellContext`e$$), ((
+           0.5 $CellContext`F$$) $CellContext`d$$^2) ((2 $CellContext`d$$) (
+            0.5 - $CellContext`e$$) + 2 $CellContext`e$$), (
+          0.5 $CellContext`F$$) $CellContext`d$$^4}, 
+        ChartLabels -> {"pi[2]", "pi[1]", "pi[0]", "pi[-1]", "pi[-2]"}], 
+      "Specifications" :> {{$CellContext`F$$, 1, 100}, {$CellContext`d$$, 0, 
+         0.99}, {$CellContext`e$$, 0, 0.5}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {185., 190.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.69071894594046*^9, 3.694972195318799*^9}]
+}, Open  ]],
+
+Cell["\<\
+Secondly, consider the levels of innovation investment that result given \
+these distinct levels of profit. 
+Let: 
+k = x2 = 0
+m = x1
+n = x0
+p = x[-1]
+q = x[-2]
+
+The total level of innovation in the economy is given by: 
+ 
+Innov = ((p+h)*q*n+2*n*q*(p+m+h)+2*n*m*q)/(2*n*m+(p+h)*q+2*q*n)
+ 
+ m = (1/b) * (pi[-1] - pi[-2] + b*h-r*b)
+ n = (1/b) * (pi[0]-pi[-2]-2*r*b)
+ p = (1/b) * (pi[1]-pi[-2]-b*h-3*r*b)
+ q = (1/b) * (pi[2] - pi[-2] - 4*r*b)
+ 
+ and the profit levels, are analogous to those determined above {F,d,e}:
+ 
+ pi[2] = F*(1-0.5*(d^4))
+ pi[1] = F*((0.5-e)*2d+2*e)*(1-0.5*(d^2))
+ pi[0] = 0.5*F*d*((0.5-e)*2d+2*e)
+ pi[-1] = 0.5*F*(d^2)((0.5-e)*2d+2*e)
+ pi[-2] = 0.5*F*(d^4)
+ 
+ Given this, we can express the individual innovation levels as: 
+ 
+ m = (1/b) * (0.5*F*(d^2)((0.5-e)*2d+2*e) - 0.5*F*(d^4) + b*h-r*b)
+ n = (1/b) * (0.5*F*d*((0.5-e)*2d+2*e)-0.5*F*(d^4)-2*r*b)
+ p = (1/b) * (F*((0.5-e)*2d+2*e)*(1-0.5*(d^2))-0.5*F*(d^4)-b*h-3*r*b)
+ q = (1/b) * (F*(1-0.5*(d^4)) - 0.5*F*(d^4) - 4*r*b) \
+\>", "Text",
+ CellChangeTimes->{{3.6907190367656317`*^9, 3.6907190738943253`*^9}, {
+  3.6907191061595087`*^9, 3.6907191540956907`*^9}, {3.690719187396365*^9, 
+  3.6907192309338217`*^9}, {3.690719277010195*^9, 3.690719295033873*^9}, {
+  3.690719328778575*^9, 3.6907193944973297`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"BarChart", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "b"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"0.5", "*", "F", "*", 
+            RowBox[{"(", 
+             RowBox[{"d", "^", "2"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+              RowBox[{"2", "*", "e"}]}], ")"}]}], "-", 
+           RowBox[{"0.5", "*", "F", "*", 
+            RowBox[{"(", 
+             RowBox[{"d", "^", "4"}], ")"}]}], "+", 
+           RowBox[{"b", "*", "h"}], "-", 
+           RowBox[{"r", "*", "b"}]}], ")"}]}], ",", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "b"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"0.5", "*", "F", "*", "d", "*", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+              RowBox[{"2", "*", "e"}]}], ")"}]}], "-", 
+           RowBox[{"0.5", "*", "F", "*", 
+            RowBox[{"(", 
+             RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+           RowBox[{"2", "*", "r", "*", "b"}]}], ")"}]}], ",", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "b"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"F", "*", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+              RowBox[{"2", "*", "e"}]}], ")"}], "*", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"0.5", "*", 
+               RowBox[{"(", 
+                RowBox[{"d", "^", "2"}], ")"}]}]}], ")"}]}], "-", 
+           RowBox[{"0.5", "*", "F", "*", 
+            RowBox[{"(", 
+             RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+           RowBox[{"b", "*", "h"}], "-", 
+           RowBox[{"3", "*", "r", "*", "b"}]}], ")"}]}], ",", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "b"}], ")"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"F", "*", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"0.5", "*", 
+               RowBox[{"(", 
+                RowBox[{"d", "^", "4"}], ")"}]}]}], ")"}]}], "-", 
+           RowBox[{"0.5", "*", "F", "*", 
+            RowBox[{"(", 
+             RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+           RowBox[{"4", "*", "r", "*", "b"}]}], ")"}]}]}], "}"}], ",", 
+      RowBox[{"ChartLabels", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<x[1]\>\"", ",", " ", "\"\<x[0]\>\"", ",", " ", "\"\<x[-1]\>\"", 
+         ",", " ", "\"\<x[-2]\>\""}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"F", ",", "1", ",", "100"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"d", ",", "0", ",", "0.99999999"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"e", ",", "0", ",", "0.5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"b", ",", "0", ",", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"h", ",", "0", ",", "5"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6907194090160522`*^9, 3.690719463081942*^9}, {
+  3.6946993388224154`*^9, 3.694699340174013*^9}, {3.694970861976095*^9, 
+  3.694970863843424*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b$$ = 1.47, $CellContext`d$$ = 
+    0.861, $CellContext`e$$ = 0.256, $CellContext`F$$ = 
+    100., $CellContext`h$$ = 0., $CellContext`r$$ = 0., Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`F$$], 1, 100}, {
+      Hold[$CellContext`d$$], 0, 0.99999999}, {
+      Hold[$CellContext`e$$], 0, 0.5}, {
+      Hold[$CellContext`r$$], 0, 1}, {
+      Hold[$CellContext`b$$], 0, 5}, {
+      Hold[$CellContext`h$$], 0, 5}}, Typeset`size$$ = {360., {113., 117.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`F$3757$$ = 0, $CellContext`d$3758$$ = 
+    0, $CellContext`e$3759$$ = 0, $CellContext`r$3760$$ = 
+    0, $CellContext`b$3761$$ = 0, $CellContext`h$3762$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b$$ = 0, $CellContext`d$$ = 
+        0, $CellContext`e$$ = 0, $CellContext`F$$ = 1, $CellContext`h$$ = 
+        0, $CellContext`r$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`F$$, $CellContext`F$3757$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$3758$$, 0], 
+        Hold[$CellContext`e$$, $CellContext`e$3759$$, 0], 
+        Hold[$CellContext`r$$, $CellContext`r$3760$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$3761$$, 0], 
+        Hold[$CellContext`h$$, $CellContext`h$3762$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      BarChart[{(
+          1/$CellContext`b$$) (((
+             0.5 $CellContext`F$$) $CellContext`d$$^2) (((
+               0.5 - $CellContext`e$$) 2) $CellContext`d$$ + 
+            2 $CellContext`e$$) - (
+           0.5 $CellContext`F$$) $CellContext`d$$^4 + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`r$$ $CellContext`b$$), (
+          1/$CellContext`b$$) (((
+             0.5 $CellContext`F$$) $CellContext`d$$) (((
+               0.5 - $CellContext`e$$) 2) $CellContext`d$$ + 
+            2 $CellContext`e$$) - (
+           0.5 $CellContext`F$$) $CellContext`d$$^4 - (
+           2 $CellContext`r$$) $CellContext`b$$), (
+          1/$CellContext`b$$) (($CellContext`F$$ (((0.5 - $CellContext`e$$) 
+               2) $CellContext`d$$ + 2 $CellContext`e$$)) (1 - 
+            0.5 $CellContext`d$$^2) - (
+           0.5 $CellContext`F$$) $CellContext`d$$^4 - $CellContext`b$$ \
+$CellContext`h$$ - (3 $CellContext`r$$) $CellContext`b$$), (
+          1/$CellContext`b$$) ($CellContext`F$$ (1 - 
+            0.5 $CellContext`d$$^4) - (
+           0.5 $CellContext`F$$) $CellContext`d$$^4 - (
+           4 $CellContext`r$$) $CellContext`b$$)}, 
+        ChartLabels -> {"x[1]", "x[0]", "x[-1]", "x[-2]"}], 
+      "Specifications" :> {{$CellContext`F$$, 1, 100}, {$CellContext`d$$, 0, 
+         0.99999999}, {$CellContext`e$$, 0, 0.5}, {$CellContext`r$$, 0, 
+         1}, {$CellContext`b$$, 0, 5}, {$CellContext`h$$, 0, 5}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {227., 232.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.690719468974244*^9, 3.694699341589521*^9, 
+  3.694970871755067*^9}]
+}, Open  ]],
+
+Cell["\<\
+From this, we can derive the steady state innovation function in terms of the \
+model parameters: 
+\
+\>", "Text",
+ CellChangeTimes->{{3.690719616569248*^9, 3.6907196483120613`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"m", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "/", "b"}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"0.5", "*", "F", "*", 
+      RowBox[{"(", 
+       RowBox[{"d", "^", "2"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+        RowBox[{"2", "*", "e"}]}], ")"}]}], "-", 
+     RowBox[{"0.5", "*", "F", "*", 
+      RowBox[{"(", 
+       RowBox[{"d", "^", "4"}], ")"}]}], "+", 
+     RowBox[{"b", "*", "h"}], "-", 
+     RowBox[{"r", "*", "b"}]}], ")"}]}]}], "\n", 
+ RowBox[{"n", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "/", "b"}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"0.5", "*", "F", "*", "d", "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+        RowBox[{"2", "*", "e"}]}], ")"}]}], "-", 
+     RowBox[{"0.5", "*", "F", "*", 
+      RowBox[{"(", 
+       RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+     RowBox[{"2", "*", "r", "*", "b"}]}], ")"}]}]}], "\n", 
+ RowBox[{"p", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "/", "b"}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"F", "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"0.5", "-", "e"}], ")"}], "*", "2", "d"}], "+", 
+        RowBox[{"2", "*", "e"}]}], ")"}], "*", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"0.5", "*", 
+         RowBox[{"(", 
+          RowBox[{"d", "^", "2"}], ")"}]}]}], ")"}]}], "-", 
+     RowBox[{"0.5", "*", "F", "*", 
+      RowBox[{"(", 
+       RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+     RowBox[{"b", "*", "h"}], "-", 
+     RowBox[{"3", "*", "r", "*", "b"}]}], ")"}]}]}], "\n", 
+ RowBox[{"q", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "/", "b"}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"F", "*", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"0.5", "*", 
+         RowBox[{"(", 
+          RowBox[{"d", "^", "4"}], ")"}]}]}], ")"}]}], "-", 
+     RowBox[{"0.5", "*", "F", "*", 
+      RowBox[{"(", 
+       RowBox[{"d", "^", "4"}], ")"}]}], "-", 
+     RowBox[{"4", "*", "r", "*", "b"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Innov", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"p", "+", "h"}], ")"}], "*", "q", "*", "n"}], "+", 
+     RowBox[{"2", "*", "n", "*", "q", "*", 
+      RowBox[{"(", 
+       RowBox[{"p", "+", "m", "+", "h"}], ")"}]}], "+", 
+     RowBox[{"2", "*", "n", "*", "m", "*", "q"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", "*", "n", "*", "m"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"p", "+", "h"}], ")"}], "*", "q"}], "+", 
+     RowBox[{"2", "*", "q", "*", "n"}]}], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.690719650192696*^9, 3.6907196774361963`*^9}, 
+   3.6946935110698*^9, 3.694697888940339*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", "Innov", "]"}]], "Input",
+ CellChangeTimes->{3.690719709795032*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"104.`", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.25`"}], "+", 
+           RowBox[{"0.25`", " ", 
+            SuperscriptBox["d", "4"]}]}], ")"}], " ", "F"}], "+", 
+        RowBox[{"b", " ", "r"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"0.25`", " ", 
+         SuperscriptBox["d", "4"], " ", "F"}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.25`"}], "+", 
+           RowBox[{"0.5`", " ", "e"}]}], ")"}], " ", "F"}], "-", 
+        RowBox[{"0.5`", " ", "d", " ", "e", " ", "F"}], "+", 
+        RowBox[{"b", " ", "r"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+        RowBox[{"0.2692307692307692`", " ", 
+         SuperscriptBox["d", "4"], " ", "F"}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "3"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.038461538461538464`"}], "+", 
+           RowBox[{"0.07692307692307693`", " ", "e"}]}], ")"}], " ", "F"}], 
+        "+", 
+        RowBox[{"d", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.23076923076923078`"}], "+", 
+           RowBox[{"0.46153846153846156`", " ", "e"}]}], ")"}], " ", "F"}], 
+        "-", 
+        RowBox[{"0.46153846153846156`", " ", "e", " ", "F"}], "-", 
+        RowBox[{"0.07692307692307693`", " ", 
+         SuperscriptBox["d", "2"], " ", "e", " ", "F"}], "-", 
+        RowBox[{"0.3076923076923077`", " ", "b", " ", "h"}], "+", 
+        RowBox[{"b", " ", "r"}]}], ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"b", " ", 
+      RowBox[{"(", 
+       RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+        RowBox[{"2.`", " ", 
+         SuperscriptBox["d", "8"], " ", 
+         SuperscriptBox["F", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "6"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1.5`"}], "+", 
+           RowBox[{"3.`", " ", "e"}]}], ")"}], " ", 
+         SuperscriptBox["F", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "5"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.5`"}], "-", 
+           RowBox[{"3.`", " ", "e"}], "+", 
+           RowBox[{"2.`", " ", 
+            SuperscriptBox["e", "2"]}]}], ")"}], " ", 
+         SuperscriptBox["F", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "3"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "0.5`"}], "+", 
+           RowBox[{"1.`", " ", "e"}], "+", 
+           RowBox[{"2.`", " ", 
+            SuperscriptBox["e", "2"]}]}], ")"}], " ", 
+         SuperscriptBox["F", "2"]}], "-", 
+        RowBox[{"7.`", " ", "b", " ", "F", " ", "r"}], "-", 
+        RowBox[{"4.`", " ", 
+         SuperscriptBox["b", "2"], " ", "h", " ", "r"}], "+", 
+        RowBox[{"32.`", " ", 
+         SuperscriptBox["b", "2"], " ", 
+         SuperscriptBox["r", "2"]}], "+", 
+        RowBox[{"e", " ", "F", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2.`", " ", "F"}], "-", 
+           RowBox[{"8.`", " ", "b", " ", "r"}]}], ")"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["d", "4"], " ", "F", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1.5`"}], "-", 
+              RowBox[{"4.`", " ", 
+               SuperscriptBox["e", "2"]}]}], ")"}], " ", "F"}], "-", 
+           RowBox[{"1.`", " ", "b", " ", "h"}], "+", 
+           RowBox[{"16.`", " ", "b", " ", "r"}]}], ")"}]}], "+", 
+        RowBox[{"d", " ", "F", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"1.`", " ", "F"}], "+", 
+           RowBox[{"b", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2.`", " ", "e", " ", "h"}], "-", 
+              RowBox[{"4.`", " ", "r"}], "-", 
+              RowBox[{"2.`", " ", "e", " ", "r"}]}], ")"}]}]}], ")"}]}], "+", 
+        
+        RowBox[{
+         SuperscriptBox["d", "2"], " ", "F", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+              RowBox[{"3.`", " ", "e"}]}], ")"}], " ", "F"}], "+", 
+           RowBox[{"b", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"1.`", " ", "h"}], "-", 
+              RowBox[{"2.`", " ", "e", " ", "h"}], "-", 
+              RowBox[{"5.`", " ", "r"}], "+", 
+              RowBox[{"10.`", " ", "e", " ", "r"}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}], ")"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.690719712427669*^9, 3.694697899341893*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"%28", ",", 
+     RowBox[{"{", 
+      RowBox[{"e", ",", "0", ",", "0.5"}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Collusion", ",", "Innovation"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "0", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"F", ",", "0", ",", "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"h", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6907197611493797`*^9, 3.690719761488083*^9}, {
+  3.6946979038552732`*^9, 3.6946979434700623`*^9}, {3.694697982110525*^9, 
+  3.694697982291231*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b$$ = 0.06, $CellContext`d$$ = 
+    0.166, $CellContext`F$$ = 26.200000000000003`, $CellContext`h$$ = 
+    5.9, $CellContext`r$$ = 0.56, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`b$$], 0, 10}, {
+      Hold[$CellContext`d$$], 0, 1}, {
+      Hold[$CellContext`r$$], 0, 1}, {
+      Hold[$CellContext`F$$], 0, 100}, {
+      Hold[$CellContext`h$$], 0, 10}}, Typeset`size$$ = {360., {106., 110.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`b$140571$$ = 0, $CellContext`d$140572$$ = 
+    0, $CellContext`r$140573$$ = 0, $CellContext`F$140574$$ = 
+    0, $CellContext`h$140575$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b$$ = 0, $CellContext`d$$ = 
+        0, $CellContext`F$$ = 0, $CellContext`h$$ = 0, $CellContext`r$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b$$, $CellContext`b$140571$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$140572$$, 0], 
+        Hold[$CellContext`r$$, $CellContext`r$140573$$, 0], 
+        Hold[$CellContext`F$$, $CellContext`F$140574$$, 0], 
+        Hold[$CellContext`h$$, $CellContext`h$140575$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(((2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d$$^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d$$^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d$$) ((2 $CellContext`d$$) (
+                 0.5 - $CellContext`e) + 2 $CellContext`e)) $CellContext`F$$ - 
+            (2 $CellContext`b$$) $CellContext`r$$) + ((
+             2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d$$^4) \
+$CellContext`F$$ + ((
+                0.5 $CellContext`d$$) ((2 $CellContext`d$$) (
+                  0.5 - $CellContext`e) + 
+                2 $CellContext`e)) $CellContext`F$$ - (
+              2 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                 0.5 - $CellContext`e) + 
+               2 $CellContext`e)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$) + \
+($CellContext`b$$^(-1) (((-0.5) $CellContext`d$$^4) $CellContext`F$$ + (1 - 
+               0.5 $CellContext`d$$^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d$$^4) $CellContext`F$$ + ((1 - 
+                 0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                   0.5 - $CellContext`e) + 
+                 2 $CellContext`e)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (3 $CellContext`b$$) $CellContext`r$$)))^(-1) ((((
+             2 $CellContext`b$$^(-3)) (((-0.5) $CellContext`d$$^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d$$^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d$$) ((2 $CellContext`d$$) (
+                 0.5 - $CellContext`e) + 
+               2 $CellContext`e)) $CellContext`F$$ - (
+             2 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+              0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                0.5 - $CellContext`e) + 
+              2 $CellContext`e)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$) + \
+(($CellContext`b$$^(-2) (((-0.5) $CellContext`d$$^4) $CellContext`F$$ + (1 - 
+               0.5 $CellContext`d$$^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d$$) ((2 $CellContext`d$$) (
+                 0.5 - $CellContext`e) + 
+               2 $CellContext`e)) $CellContext`F$$ - (
+             
+             2 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d$$^4) $CellContext`F$$ + ((1 - 
+                0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                  0.5 - $CellContext`e) + 
+                2 $CellContext`e)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (3 $CellContext`b$$) $CellContext`r$$)) + (((
+             2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d$$^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d$$^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d$$^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d$$) ((2 $CellContext`d$$) (
+                 0.5 - $CellContext`e) + 
+               2 $CellContext`e)) $CellContext`F$$ - (
+             2 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d$$^4) $CellContext`F$$ + ((1 - 
+                0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                  0.5 - $CellContext`e) + 
+                2 $CellContext`e)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (
+              3 $CellContext`b$$) $CellContext`r$$) + $CellContext`b$$^(-1) \
+(((-0.5) $CellContext`d$$^4) $CellContext`F$$ + ((
+                0.5 $CellContext`d$$^2) ((2 $CellContext`d$$) (
+                  0.5 - $CellContext`e) + 
+                2 $CellContext`e)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$))), {$CellContext`e, 0, 
+         0.5}, AxesLabel -> {$CellContext`Collusion, \
+$CellContext`Innovation}], 
+      "Specifications" :> {{$CellContext`b$$, 0, 10}, {$CellContext`d$$, 0, 
+         1}, {$CellContext`r$$, 0, 1}, {$CellContext`F$$, 0, 
+         100}, {$CellContext`h$$, 0, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {206., 211.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.690719779813404*^9, {3.6946979083810596`*^9, 3.6946979833891773`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"%28", ",", 
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0", ",", "1"}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Incumbent", " ", "distance"}], ",", "Innovation"}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "0", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"e", ",", "0", ",", "0.5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"F", ",", "0", ",", "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"h", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6907197611493797`*^9, 3.690719761488083*^9}, {
+   3.6907198347614527`*^9, 3.690719884131547*^9}, 3.690720505416472*^9, {
+   3.694698004044853*^9, 3.694698005632311*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b$$ = 
+    3.7800000000000002`, $CellContext`e$$ = 0.5, $CellContext`F$$ = 
+    96.4, $CellContext`h$$ = 8.64, $CellContext`r$$ = 0.214, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`b$$], 0, 10}, {
+      Hold[$CellContext`e$$], 0, 0.5}, {
+      Hold[$CellContext`r$$], 0, 1}, {
+      Hold[$CellContext`F$$], 0, 100}, {
+      Hold[$CellContext`h$$], 0, 10}}, Typeset`size$$ = {360., {84., 89.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`b$141476$$ = 0, $CellContext`e$141477$$ = 
+    0, $CellContext`r$141478$$ = 0, $CellContext`F$141479$$ = 
+    0, $CellContext`h$141480$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b$$ = 0, $CellContext`e$$ = 
+        0, $CellContext`F$$ = 0, $CellContext`h$$ = 0, $CellContext`r$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b$$, $CellContext`b$141476$$, 0], 
+        Hold[$CellContext`e$$, $CellContext`e$141477$$, 0], 
+        Hold[$CellContext`r$$, $CellContext`r$141478$$, 0], 
+        Hold[$CellContext`F$$, $CellContext`F$141479$$, 0], 
+        Hold[$CellContext`h$$, $CellContext`h$141480$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(((2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d) ((2 $CellContext`d) (
+                 0.5 - $CellContext`e$$) + 
+               2 $CellContext`e$$)) $CellContext`F$$ - (
+             2 $CellContext`b$$) $CellContext`r$$) + ((
+             2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d^4) \
+$CellContext`F$$ + ((
+                0.5 $CellContext`d) ((2 $CellContext`d) (
+                  0.5 - $CellContext`e$$) + 
+                2 $CellContext`e$$)) $CellContext`F$$ - (
+              2 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                 0.5 - $CellContext`e$$) + 
+               2 $CellContext`e$$)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$) + \
+($CellContext`b$$^(-1) (((-0.5) $CellContext`d^4) $CellContext`F$$ + (1 - 
+               0.5 $CellContext`d^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d^4) $CellContext`F$$ + ((1 - 
+                 0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                   0.5 - $CellContext`e$$) + 
+                 2 $CellContext`e$$)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (3 $CellContext`b$$) $CellContext`r$$)))^(-1) ((((
+             2 $CellContext`b$$^(-3)) (((-0.5) $CellContext`d^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d) ((2 $CellContext`d) (
+                 0.5 - $CellContext`e$$) + 
+               2 $CellContext`e$$)) $CellContext`F$$ - (
+             2 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+              0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                0.5 - $CellContext`e$$) + 
+              2 $CellContext`e$$)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$) + \
+(($CellContext`b$$^(-2) (((-0.5) $CellContext`d^4) $CellContext`F$$ + (1 - 
+               0.5 $CellContext`d^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d) ((2 $CellContext`d) (
+                 0.5 - $CellContext`e$$) + 
+               2 $CellContext`e$$)) $CellContext`F$$ - (
+             
+             2 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d^4) $CellContext`F$$ + ((1 - 
+                0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                  0.5 - $CellContext`e$$) + 
+                2 $CellContext`e$$)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (3 $CellContext`b$$) $CellContext`r$$)) + (((
+             2 $CellContext`b$$^(-2)) (((-0.5) $CellContext`d^4) \
+$CellContext`F$$ + (1 - 0.5 $CellContext`d^4) $CellContext`F$$ - (
+              4 $CellContext`b$$) $CellContext`r$$)) (((-0.5) \
+$CellContext`d^4) $CellContext`F$$ + ((
+               0.5 $CellContext`d) ((2 $CellContext`d) (
+                 0.5 - $CellContext`e$$) + 
+               2 $CellContext`e$$)) $CellContext`F$$ - (
+             2 $CellContext`b$$) $CellContext`r$$)) ($CellContext`h$$ + \
+$CellContext`b$$^(-1) (((-0.5) $CellContext`d^4) $CellContext`F$$ + ((1 - 
+                0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                  0.5 - $CellContext`e$$) + 
+                2 $CellContext`e$$)) $CellContext`F$$ - $CellContext`b$$ \
+$CellContext`h$$ - (
+              3 $CellContext`b$$) $CellContext`r$$) + $CellContext`b$$^(-1) \
+(((-0.5) $CellContext`d^4) $CellContext`F$$ + ((
+                0.5 $CellContext`d^2) ((2 $CellContext`d) (
+                  0.5 - $CellContext`e$$) + 
+                2 $CellContext`e$$)) $CellContext`F$$ + $CellContext`b$$ \
+$CellContext`h$$ - $CellContext`b$$ $CellContext`r$$))), {$CellContext`d, 0, 
+         1}, AxesLabel -> {$CellContext`Incumbent $CellContext`distance, \
+$CellContext`Innovation}], 
+      "Specifications" :> {{$CellContext`b$$, 0, 10}, {$CellContext`e$$, 0, 
+         0.5}, {$CellContext`r$$, 0, 1}, {$CellContext`F$$, 0, 
+         100}, {$CellContext`h$$, 0, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {184., 189.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.690719842336914*^9, 3.690719889310759*^9, 
+  3.694698006413973*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Collusion (lack of competition) has an unambiguously positive effect on the \
+level of innovation in the economy. However, the degree of innovation in the \
+economy is determined by the magnitude of the advantage a technology leader \
+has over followers. In other words, the size of the innovation. Assume an \
+innovation allows the innovator to receive large monetary gains. Whereas he \
+was formerly receiving a fraction ",
+ StyleBox["d",
+  FontWeight->"Bold"],
+ " of X, he now receives the full X. if ",
+ StyleBox["d",
+  FontWeight->"Bold"],
+ " is very small followers have lower means to innovate. If d is large, \
+followers have lower incentive to innovate. \n\nCore message: \n- collusion \
+has a positive effect on innovation\n- the level of innovation depends on the \
+possible gains from the innovation and the cost of innovating"
+}], "Text",
+ CellChangeTimes->{{3.690719973362361*^9, 3.690720018767421*^9}, {
+  3.690720179954836*^9, 3.690720474679678*^9}, {3.690720586426656*^9, 
+  3.690720618289143*^9}, {3.690720702028533*^9, 3.6907208149330597`*^9}}]
+},
+WindowSize->{1280, 651},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 214, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[797, 28, 2069, 59, 63, "Input"],
+Cell[2869, 89, 2628, 51, 392, "Output"]
+}, Open  ]],
+Cell[5512, 143, 1290, 37, 600, "Text"],
+Cell[CellGroupData[{
+Cell[6827, 184, 3657, 99, 97, "Input"],
+Cell[10487, 285, 3859, 74, 476, "Output"]
+}, Open  ]],
+Cell[14361, 362, 191, 5, 49, "Text"],
+Cell[14555, 369, 3007, 96, 97, "Input"],
+Cell[CellGroupData[{
+Cell[17587, 469, 107, 2, 28, "Input"],
+Cell[17697, 473, 4829, 131, 101, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22563, 609, 846, 22, 28, "Input"],
+Cell[23412, 633, 6822, 123, 434, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30271, 761, 912, 24, 28, "Input"],
+Cell[31186, 787, 6813, 124, 390, "Output"]
+}, Open  ]],
+Cell[38014, 914, 1081, 19, 163, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
